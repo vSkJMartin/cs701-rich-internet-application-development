@@ -5,6 +5,7 @@
     <title>Projects</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
 </head>
 <body>
 <header>
@@ -51,6 +52,14 @@
         <h3>Javascript Calculator</h3>
         <div id="calculator">
             <input type="number" id="first-number">
+            <input type="number" id="second-number">
+            <button id="add" onclick="addition()">+</button>
+            <button id="sbt" onclick="subtract()">-</button>
+            <button id="mlt" onclick="multiply()">*</button>
+            <button id="dvd" onclick="divide()">/</button>
+            <button id="pwr" onclick="power()">**</button>
+            <button id="clr" onclick="reset()">Clear</button>
+            <h3 id="output"></h3>
         </div>
     </main>
 </div>
