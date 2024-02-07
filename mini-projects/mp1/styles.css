@@ -1,0 +1,119 @@
+@media only screen and (min-width: 750px) {
+    body {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    header, footer {
+        text-align: left;
+        padding: 20px;
+        background-color: #2B3D6E;
+        color: #D4BC2A;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .container {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    nav {
+        flex: 0 0 30%;
+        padding: 20px;
+        background-color: #5F7EAC;
+        color: #4263A3;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        margin-bottom: 50px;
+        background-color: #CDD68A;
+    }
+    nav ul li a {
+        text-decoration: none;
+        display: block;
+        color: #4263A3;
+        font-size: 24px;
+        text-align: center;
+    }
+    main {
+        flex: 1;
+        padding: 20px;
+        max-width: 70%;
+        background-color: #D4BC2A;
+    }
+    h2 {
+        text-align: center;
+        color: #2B3D6E;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 749px) {
+    body {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    header, footer {
+        padding: 20px;
+        background-color: #2B3D6E;
+        color: #D4BC2A;
+        width: 80%;
+        margin: 0 auto;
+    }
+    header {
+        text-align: center;
+    }
+    main {
+        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #D4BC2A;
+    }
+    h2 {
+        text-align: center;
+        color: #2B3D6E;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: auto;
+    }
+    nav {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #5F7EAC;
+        color: #4263A3;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul li {
+        flex: 1;
+        background-color: #CDD68A;
+        border: 5px solid #4263A3;
+    }
+    nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: #4263A3;
+        font-size: 10px;
+        text-align: center;
+    }
+}
