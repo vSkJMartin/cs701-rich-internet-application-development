@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Employment</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+<header>
+    <h1>Martin Li</h1>
+    <p>My Online Resume</p>
+</header>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="home-resume.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="employment.html">Employment</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="extracurricular-activities.html">Extracurricular Activities</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Employment</h2>
+        <div>
+            <h3>HUAWEI</h3>
+            <p>Software Engineer</p>
+            <p>Sep 2022 - Aug 2023</p>
+            <ul>
+                <li>Developed interface system, including code logic, sequence diagram, and database diagrams, etc.</li>
+                <li>Created a brand-new architecture with introducing the concept of Indicator that included query_type, start&end_date, query_function, dsl, response_parser and other data</li>
+                <li>Adapted the existing query codes of products as indicators and unified storage management</li>
+                <li>The changed product architecture: The console sends the request to the metrics microservice, and the metrics microservice searches the cache for relevant index data. If NOT, the request is sent to the boa orchestration engine, and then the orchestration engine looks up the indicator ID in the database and returns the indicator details. At last, the metrics microservice explores the elastic search based on the query criteria in the above indicator details.</li>
+            </ul>
+        </div>
+    </main>
+</div>
+<footer>
+    <p>All Rights Reserved by Martin Li <a href="home-resume.html">Credits</a> &#169;</p>
+</footer>
 </body>
 </html>
