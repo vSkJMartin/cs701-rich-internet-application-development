@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import Character from "./Character";
+import styled from "styled-components";
+
+const StyledH2 = styled.h2`
+    margin-top: 100px
+`;
+
 function List() {
     const [loading, setLoading] = useState(true);
     const [characters, setCharacters] = useState([]);
@@ -13,13 +19,14 @@ function List() {
 
     return (
         <div>
-            <h2>Characters</h2>
+            <StyledH2>Characters</StyledH2>
             {loading ? (
                 <div>Loading...</div>
             ) : (
                 characters.map((character) => (
                     <Character key={character.id} name={character.name} origin={character.origin}
-                               img_url={character.img_url}/>
+                               img_url={character.img_url} status={character.status}
+                               species={character.species} gender={character.gender} hair={character.hair}/>
                 ))
             )}
         </div>
