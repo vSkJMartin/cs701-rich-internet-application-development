@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-import Link from '../components/Link.jsx'
+import {NavLink} from "react-router-dom";
 import List from "../components/List.jsx";
 import styled from "styled-components";
+
+const StyledNavLink = styled(NavLink)`
+    color: #61dafb;
+`;
 
 const ProjectContainer = styled.div`
     width: 50%;
@@ -35,7 +39,7 @@ function Projects({ userName }) {
                 <div>
                     <List items={projects.map((project) => ({
                         field: project.name,
-                        value: <Link url={project.html_url} title={project.html_url} />,
+                        value: <StyledNavLink to={`/projects/${project.name}`}>Open Project</StyledNavLink>,
                     }))} />
                 </div>
             )}

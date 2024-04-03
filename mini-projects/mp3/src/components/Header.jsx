@@ -1,4 +1,14 @@
 import styled, { keyframes } from "styled-components";
+import {NavLink} from "react-router-dom";
+
+const StyledNavLink = styled(NavLink)`
+    color: #61dafb;
+    margin-right: 10px;
+`;
+
+const StyledNav = styled.nav`
+    margin-bottom: 10px;
+`;
 
 const AppLogoSpin = keyframes`
     from {
@@ -34,6 +44,14 @@ function Header({logo}) {
         <AppHeader>
             <AppLogo src={logo} alt='logo'/>
             <h1>My Portfolio</h1>
+            <StyledNav>
+                <StyledNavLink to="/">
+                    About me
+                </StyledNavLink>
+                <StyledNavLink to="/projects">
+                    Projects
+                </StyledNavLink>
+            </StyledNav>
         </AppHeader>
     );
 }
