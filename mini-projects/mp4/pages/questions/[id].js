@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import styled from "styled-components";
 import Card from "@/components/Card";
 
@@ -38,17 +39,22 @@ function QuestionDetail() {
             {loading ? (
                 <span>Loading...</span>
             ) : (
-                <Card
-                    key={question.question_id}
-                    title={question.title}
-                    views={question.view_count}
-                    answers={question.answer_count}
-                    ownerUserId={question.owner ? question.owner.user_id : ''}
-                    ownerProfileImage={question.owner ? question.owner.profile_image : ''}
-                    ownerDisplayName={question.owner ? question.owner.display_name : ''}
-                    ownerLink={question.owner ? question.owner.link : ''}
-                    score={question.score}
-                />
+                <>
+                    <Head>
+                        <title>{question.title}</title>
+                    </Head>
+                    <Card
+                        key={question.question_id}
+                        title={question.title}
+                        views={question.view_count}
+                        answers={question.answer_count}
+                        ownerUserId={question.owner ? question.owner.user_id : ''}
+                        ownerProfileImage={question.owner ? question.owner.profile_image : ''}
+                        ownerDisplayName={question.owner ? question.owner.display_name : ''}
+                        ownerLink={question.owner ? question.owner.link : ''}
+                        score={question.score}
+                    />
+                </>
             )}
         </QuestionDetailContainer>
     );

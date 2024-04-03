@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from 'next/link';
+import Head from "next/head";
 import Card from "@/components/Card";
 import Pagination from "@/components/Pagination";
 
@@ -16,32 +17,37 @@ const CardLink = styled.a`
 
 function Questions({ questions, hasMore, page }) {
     return (
-        <QuestionsContainer>
-            <h2>Questions</h2>
-            <div>
-                {questions.map((question) => (
-                    <Link
-                        key={question.question_id}
-                        href={`/questions/${question.question_id}`}
-                        passHref
-                    >
-                        <CardLink>
-                            <Card
-                                title={question.title}
-                                views={question.view_count}
-                                answers={question.answer_count}
-                                ownerUserId={question.owner.user_id}
-                                ownerProfileImage={question.owner.profile_image}
-                                ownerDisplayName={question.owner.display_name}
-                                ownerLink={question.owner.link}
-                                score={question.score}
-                            />
-                        </CardLink>
-                    </Link>
-                ))}
-            </div>
-            <Pagination currentPage={parseInt(page) || 1} hasMore={hasMore}/>
-        </QuestionsContainer>
+        <>
+            <Head>
+                <title>Questions</title>
+            </Head>
+            <QuestionsContainer>
+                <h2>Questions</h2>
+                <div>
+                    {questions.map((question) => (
+                        <Link
+                            key={question.question_id}
+                            href={`/questions/${question.question_id}`}
+                            passHref
+                        >
+                            <CardLink>
+                                <Card
+                                    title={question.title}
+                                    views={question.view_count}
+                                    answers={question.answer_count}
+                                    ownerUserId={question.owner.user_id}
+                                    ownerProfileImage={question.owner.profile_image}
+                                    ownerDisplayName={question.owner.display_name}
+                                    ownerLink={question.owner.link}
+                                    score={question.score}
+                                />
+                            </CardLink>
+                        </Link>
+                    ))}
+                </div>
+                <Pagination currentPage={parseInt(page) || 1} hasMore={hasMore}/>
+            </QuestionsContainer>
+        </>
     );
 }
 
