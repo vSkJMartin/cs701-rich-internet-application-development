@@ -1,5 +1,9 @@
-import Questions from "@/pages/questions";
+import Questions, {getServerSideProps as getServerSidePropsQuestions} from "@/pages/questions";
 
-export default function Home() {
-    return <Questions />;
+export function getServerSideProps(context) {
+    return getServerSidePropsQuestions(context);
+}
+
+export default function Home(props) {
+    return <Questions {...props} />
 }
